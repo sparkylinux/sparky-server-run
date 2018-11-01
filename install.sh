@@ -16,6 +16,8 @@
 
 if [ "$1" = "uninstall" ]; then
 	rm -f /usr/bin/sparky-server-run
+	rm -f /etc/xdg/autostart/sparky-server-run.desktop
 else
 	cp bin/* /usr/bin/
+	cp etc/* /etc/xdg/autostart/
 fi

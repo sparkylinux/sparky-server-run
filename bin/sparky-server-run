@@ -8,31 +8,7 @@ if [ "$CHECKBONDING" = "" ]; then
 	modprobe bonding
 fi
 
-# check 2: beep_netdata
-CHECKBEEPNETDATA="`systemctl status beep_netdata | grep inacitve`"
-if [ "$CHECKBEEPNETDATA" != "" ]; then
-	systemctl start beep_netdata
-fi
-
-# check 3: beep_samba
-CHECKBEEPSAMBA="`systemctl status beep_samba | grep inacitve`"
-if [ "$CHECKBEEPSAMBA" != "" ]; then
-	systemctl start beep_samba
-fi
-
-# check 4: beep_sys
-CHECKBEEPSYS="`systemctl status beep_sys | grep inacitve`"
-if [ "$CHECKBEEPSYS" != "" ]; then
-	systemctl start beep_sys
-fi
-
-# check 5: beep_webmin
-CHECKBEEPWEBMIN="`systemctl status beep_webmin | grep inacitve`"
-if [ "$CHECKBEEPWEBMIN" != "" ]; then
-	systemctl start beep_webmin
-fi
-
-# check 6: samba-ad-dc
+# check 2: samba-ad-dc
 CHECKSAMBAADDC="`systemctl status samba-ad-dc | grep inacitve`"
 if [ "$CHECKSAMBAADDC" != "" ]; then
 	systemctl unmask samba-ad-dc

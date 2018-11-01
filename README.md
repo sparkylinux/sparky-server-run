@@ -21,7 +21,6 @@ Dependencies:
 grep
 kmod
 samba
-sparky-beep
 systemd
 
 Install:
